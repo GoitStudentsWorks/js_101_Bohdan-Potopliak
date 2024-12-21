@@ -1,11 +1,11 @@
 {
-  "name": "freeAzov",
+  "name": "free-azov",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/freeAzov/",
+    "build": "vite build --base=/free-azov/",
     "preview": "vite preview"
   },
   "devDependencies": {
