@@ -1,12 +1,11 @@
 .benefits-title {
-    font-family: "Inter Tight";
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 150%;
-        letter-spacing: -0.02em;
-        text-transform: uppercase;
-        color: rgba(250, 250, 250, 0.40);
-        margin-bottom: 32px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgba(250, 250, 250, 0.40);
+    margin-bottom: 32px;
 }
 
 
@@ -65,7 +64,7 @@
     width: 188px;
     font-size: 16px;
     letter-spacing: -0.02em;
-    color:#FAFAFA;
+    color: #FAFAFA;
     background-color: transparent;
     margin-top: 32px;
     margin-bottom: 64px;
@@ -83,26 +82,27 @@
 
 @media screen and (min-width: 1440px) {
     .benefits-container {
-            display: flex;
-        }
-    
-        .benefits-title-container {
-            width: 50%;
-        }
-    
-        .benefits-item {
-            flex-basis: calc((100% - 16px) / 2);
-        }
-    
-        .benefits-content {
-            width: 50%;
-        }
-    
-        .benefits-title {
-            margin-bottom: 0px;
-        }
+        display: flex;
+    }
 
-        .benefits-button {
-            margin-bottom: 164px;
-        }
+    .benefits-title-container {
+        width: 50%;
+    }
+
+    .benefits-item {
+        flex-basis: calc((100% - 16px) / 2);
+    }
+
+    .benefits-content {
+        width: 50%;
+    }
+
+    .benefits-title {
+        margin-bottom: 0px;
+    }
+
+    .benefits-button {
+        margin-bottom: 164px;
+    }
+
 }
