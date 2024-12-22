@@ -9,15 +9,15 @@ menuCloseBtn.addEventListener('click', handleCloseBtnClick);
 mobileMenu.addEventListener('click', handleRedirectClick);
 mainMenu.addEventListener('click', handleMainMenuOpen);
 
-function handleOpenBtnClick() {
+export function handleOpenBtnClick() {
     mobileMenu.classList.add('is-open');
 }
 
-function handleCloseBtnClick() {
+export function handleCloseBtnClick() {
     mobileMenu.classList.remove('is-open');
 }
 
-function handleRedirectClick(e) {
+export function handleRedirectClick(e) {
     if (!e.target.classList.contains('mobile-menu-link')) {
         return;
     }
@@ -25,7 +25,7 @@ function handleRedirectClick(e) {
     mobileMenu.classList.remove('is-open');
 }
 
-function handleMainMenuOpen(e) {
+export function handleMainMenuOpen(e) {
     e.preventDefault();
     menuNav.classList.toggle('is-open')
 
