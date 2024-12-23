@@ -9,7 +9,7 @@ const formData = { email: '', comment: '' };
 
 function handleInput(event) {
   formData[event.target.name] = event.target.value.trim();
-
+  console.log(formData.comment.length);
   return;
 }
 
