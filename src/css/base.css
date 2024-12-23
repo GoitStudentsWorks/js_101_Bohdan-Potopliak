@@ -17,9 +17,9 @@ html {
 }
 
 body {
-    background-color: var(--main-background-color);
-    font-family: var(--main-font);
-    color: var(--main-color);
+  background-color: var(--main-background-color);
+  font-family: var(--main-font);
+  color: var(--main-color);
 }
 
 input,
@@ -84,6 +84,7 @@ button:hover {
 }
 
 .container {
+  margin: 0 auto;
   min-width: 320px;
   max-width: 375px;
   padding: 0 16px;
