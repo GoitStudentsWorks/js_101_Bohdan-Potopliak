@@ -4,8 +4,6 @@ import axios from "axios";
 import Swiper from "swiper";
 import 'swiper/css';
 
-
-
 const apiUrl = "https://portfolio-js.b.goit.study/api/reviews";
 const cardsContainer = document.querySelector('.cards');
 
@@ -19,9 +17,22 @@ fetchData()
         cardsContainer.insertAdjacentHTML("beforeend", createCards(data));
     })
     .catch(error => {
-        showError("An error occured. Please try again.")
-        console.error("Axios error:", error)
-    });
+        let serverError = error;
+
+        let observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && serverError) {
+                    showError("Виникли проблеми з отриманням даних із сервера.");
+                    cardsContainer.insertAdjacentHTML("beforeend", `<p class="not-found"> Not found</p>`)
+                    serverError = null;
+                    observer.disconnect();
+                }
+            });
+        });
+
+        const reviewsSection = document.getElementById('reviews');
+        observer.observe(reviewsSection);
+})
 
 function createCards(arr) {
     return arr.map(({ author, avatar_url, review }) => `
@@ -53,6 +64,21 @@ const swiper = new Swiper('.swiper', {
             spaceBetween: 16
         }
     },
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight') {
+        swiper.slideNext();
+    } else if (event.key === 'ArrowLeft') {
+        swiper.slidePrev();
+    } else if (event.key === 'Tab') {
+        event.preventDefault();
+        if (event.shiftKey) {
+            swiper.slidePrev();
+        } else {
+            swiper.slideNext();
+        }
+    }
 });
 
 function showError(message) {
