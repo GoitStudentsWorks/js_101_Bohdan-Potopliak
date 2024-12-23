@@ -1,14 +1,6 @@
-.hidden {
-    display: none;
-}
 
-ul {
-    list-style-type: none;
-    margin: 0px;
-    padding-left: 0px;
-}
 
-h2 {
+h3 {
     font-family: "Inter Tight", sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -21,11 +13,8 @@ p {
     font-family: "Inter Tight", sans-serif;
 }
 
-
 .cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    margin: 32px 0px;
 }
 
 .card {
@@ -34,11 +23,9 @@ p {
     padding: 32px 24px;
     max-width: 343px;
     height: 302px;
-    margin: 32px 0px;
 }
 
 .card-img {
-    background-color: blue;
     border-radius: 10px;
     width: 48px;
     height: 48px;
@@ -48,26 +35,22 @@ p {
 
 .card-content {
     max-width: 295px;
+    height: 158px;
     margin: 0px;
 }
 
-.card-name {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 150%;
-    letter-spacing: -0.02em;
-    color: #FAFAFA;
+.common-headers {
     margin-bottom: 8px;
 }
 
-.card-text {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: -0.02em;
-    color: rgba(250, 250, 250, 0.6);
-    margin-top: 0px;
+.common-text {
+    max-height: 120px;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: 1px;
 }
+
 
 .arrows {
     display: flex;
@@ -75,33 +58,26 @@ p {
     gap: 12px;
 }
 
-.arrow-left {
+.arrow{
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 60px;
     padding: 14px;
+    width: 68px;
+    height: 68px;
+    background-color: transparent;
 }
 
-.arrow-right {
+.blocked-arrow {
     border: 1px solid rgba(250, 250, 250, 0.5);
-    border-radius: 60px;
-    padding: 14px;
 }
 
 @media screen and (min-width:768px) {
-    .hidden {
-        display: block;
-    }
-
-    .cards {
-        gap: 16px;
-    }
-
     .arrows {
         gap: 20px;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1280px) {
     .card{
         max-width: 332px;
     }
