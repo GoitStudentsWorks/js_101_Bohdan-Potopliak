@@ -1,3 +1,331 @@
-.header {
-    position: relative;
+.work_together {
+  position: relative;
+  overflow: hidden;
+}
+
+.work_together_background_image {
+  background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0),
+      rgba(59, 59, 59, 0.1),
+      rgba(255, 255, 255, 0)
+    ),
+    url(../public/img/work-together-img/bg-@1.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 290px center;
+}
+
+@media screen and (min-device-pixel-ratio: 1.5),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 1.5dppx),
+  (min-resolution: 144dpi) {
+  .work_together_background_image {
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0),
+        rgba(59, 59, 59, 0.1),
+        rgba(255, 255, 255, 0)
+      ),
+      image-set(
+        url(../public/img/work-together-img/bg-@2.png) type('image/png'),
+        url(../public/img/work-together-img/bg-@1.png) type('image/png')
+      );
+  }
+}
+
+.work_together_container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.work_together_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 63px;
+  align-items: flex-start;
+}
+
+.work_together_wrap_picture {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.work_together_logo {
+  border-radius: 12px;
+  background: url(<path-to-image>) lightgray -39.5px -8.999px / 301.752%
+    201.193% no-repeat;
+}
+
+.work_together_wrap_logo_text {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.work_together_wrap_logo_text span {
+  color: var(--accent-color);
+}
+
+.work_together_form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 64px;
+}
+
+.work_together_wrap_form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.work_together_wrap_email,
+.work_together_wrap_textarea {
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  padding-bottom: 20px;
+}
+
+.work_together_input_email {
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  width: 343px;
+  height: 24px;
+}
+
+.work_together_input_text {
+  background-color: transparent;
+  height: 24px;
+  width: 343px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 0px;
+}
+
+.work_together_button {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.work_together_button:hover,
+.work_together_button:focus,
+.work_together_button:active {
+  background-color: var(--accent-color-hover);
+}
+
+.work_together_address_list {
+  display: inline-flex;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.work_together_address_item {
+  border-radius: 60px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  padding: 10px 12px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work_together_address_item:hover,
+.work_together_address_item:focus,
+.work_together_address_item:active {
+  border: 1px solid #fafafa;
+}
+
+.work_together_address_link {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.work_together_backdrop {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(15, 15, 16, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 138px 16px;
+  position: absolute;
+  z-index: 1;
+}
+
+.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.work_together_modal {
+  z-index: 2;
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  background-color: var(--main-background-color);
+}
+
+.work_together_modal_close_btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.work_together_modal_wrap_messages {
+  padding: 64px 32px 64px 32px;
+}
+
+.work_together_modal_title,
+.work_together_modal_text {
+  text-align: center;
+}
+.work_together_modal_title {
+  margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  .work_together_background_image {
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0),
+        rgba(59, 59, 59, 0.1),
+        rgba(255, 255, 255, 0)
+      ),
+      url(../public/img/work-together-img/bg-@1.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 570px center;
+  }
+
+  @media screen and (min-device-pixel-ratio: 1.5),
+    (-webkit-min-device-pixel-ratio: 1.5),
+    (min-resolution: 1.5dppx),
+    (min-resolution: 144dpi) {
+    .work_together_background_image {
+      background-image: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0),
+          rgba(59, 59, 59, 0.1),
+          rgba(255, 255, 255, 0)
+        ),
+        image-set(
+          url(../public/img/work-together-img/bg-@2.png) type('image/png'),
+          url(../public/img/work-together-img/bg-@1.png) type('image/png')
+        );
+    }
+  }
+
+  .work_together_container {
+    padding-top: 80px;
+    padding-bottom: 169px;
+  }
+
+  .work_together_wrap {
+    gap: 7px;
+    padding-bottom: 64px;
+  }
+  .work_together_wrap_picture {
+    gap: 20px;
+  }
+  .work_together_logo {
+    border-radius: 24px;
+  }
+
+  .work_together_wrap_logo_text {
+    font-size: 64px;
+  }
+
+  .work_together_form {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 18px;
+  }
+
+  .work_together_wrap_form {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .work_together_input_email {
+    width: 245px;
+  }
+
+  .work_together_input_text {
+    width: 245px;
+  }
+
+  .work_together_button {
+    width: 150px;
+    height: 150px;
+  }
+
+  .work_together_address_list {
+    gap: 8px;
+  }
+
+  .work_together_address_item {
+    padding: 18px 32px;
+  }
+  .work_together_address_link {
+    font-size: 16px;
+  }
+
+  .work_together_backdrop {
+    padding: 195px 138px;
+  }
+
+  .work_together_modal_wrap_messages {
+    padding: 64px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 196px;
+  }
+
+  .work_together_background_image {
+    background-position: 1040px center;
+  }
+
+  .work_together_backdrop {
+    padding: 195px 474px;
+  }
+
+  .work_together_input_email {
+    width: 390px;
+  }
+
+  .work_together_input_text {
+    width: 390px;
+  }
+
+  .work_together_form {
+    gap: 86px;
+  }
 }
