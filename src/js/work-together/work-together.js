@@ -1,35 +1,79 @@
 import { postRequest } from './work-together-api';
+import { showError } from './toast-helper';
 
 const contactForm = document.querySelector('#work_together_form');
-
 contactForm.addEventListener('input', handleInput);
 contactForm.addEventListener('submit', onContactFormSubmit);
-
 const formData = { email: '', comment: '' };
 
 function handleInput(event) {
+  const messageContent = document.getElementById(
+    'work_together_message_content'
+  );
+  const messageWrap = document.getElementById('work_together_message_wrap');
+  const userCommentTextarea = document.getElementById('work_together_comment');
+  const MAX_COMMENT_LENGTH = 21;
+
+  let userComment = userCommentTextarea.value;
+
+  const pattern = /^\w+(\.\w+)?@[a-zA-Z]+\.[a-zA-Z]{2,3}$/;
   formData[event.target.name] = event.target.value.trim();
-  console.log(formData.comment.length);
-  return;
+
+  if (
+    event.target.name === 'comment' &&
+    userComment.length > MAX_COMMENT_LENGTH
+  ) {
+    userComment = userComment.slice(0, MAX_COMMENT_LENGTH - 3) + '...';
+    userCommentTextarea.value = userComment;
+  }
+
+  if (event.target.name === 'email') {
+    const email = formData.email;
+
+    if (email.length === 0) {
+      messageContent.textContent = '';
+      messageWrap.classList.remove(
+        'work_together_wrap_red',
+        'work_together_wrap_green'
+      );
+      messageContent.classList.remove(
+        'work_together_succes_red',
+        'work_together_succes_green'
+      );
+    } else if (!pattern.test(email)) {
+      messageContent.textContent = 'Invalid email, try again';
+      messageWrap.classList.add('work_together_wrap_red');
+      messageContent.classList.add('work_together_succes_red');
+      messageWrap.classList.remove('work_together_wrap_green');
+      messageContent.classList.remove('work_together_succes_green');
+    } else {
+      messageContent.textContent = 'Success!';
+      messageWrap.classList.add('work_together_wrap_green');
+      messageContent.classList.add('work_together_succes_green');
+      messageWrap.classList.remove('work_together_wrap_red');
+      messageContent.classList.remove('work_together_succes_red');
+    }
+  }
 }
 
 const modalHandler = handleModal();
 
 async function onContactFormSubmit(event) {
   event.preventDefault();
-  console.log(1);
+
   if (!formData.email || !formData.comment) {
-    return alert('Fill please all fields');
+    return alert('Please fill all fields');
   }
 
   try {
-    console.log(' formData', formData);
+    console.log('formData', formData);
     const response = await postRequest(formData);
 
     console.log('response', response);
     modalHandler.openModal(response.data.title, response.data.message);
     event.target.reset();
   } catch (error) {
+    showError(error.message);
     console.error('error', error);
   }
 }
