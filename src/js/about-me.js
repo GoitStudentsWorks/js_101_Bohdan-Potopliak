@@ -2,45 +2,38 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
 new Accordion('.accordion-block', {
-  showMultiple: true,
-  openOnInit: [0],
+showMultiple: true,
+openOnInit: [0],
 });
 
 window.addEventListener('load', () => {
-  document.querySelector('.accordion-block').classList.remove('no-animation');
+document.querySelector('.accordion-block').classList.remove('no-animation');
 });
 
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 const swiper = new Swiper('.skill', {
-  direction: 'horizontal',
-  loop: true,
-  allowSlidePrev: false,
-  slidesPerView: 2,
+direction: 'horizontal',
+loop: true,
+allowSlidePrev: false,
+slidesPerView: 2,
 
-  breakpoints: {
+breakpoints: {
     768: {
-      slidesPerView: 3,
+    slidesPerView: 3,
     },
     1440: {
-      slidesPerView: 6,
+    slidesPerView: 6,
     },
-  },
-   keyboard: {
+},
+keyboard: {
     enabled: true,
-  },
-  navigation: {
+},
+navigation: {
     nextEl: '.btn-next',
-  },
-  mousewheel: {
+},
+mousewheel: {
     enabled: true,
-  },
+},
 });
-
-
-
-
-
-
-
