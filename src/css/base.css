@@ -1,4 +1,9 @@
 :root {
+
+  --color: #0c0c0c;
+  --background-color: #1c1d20;
+  --cards: #242527;
+  --button-text: #ed3b44;
   --accent-color: #0041e8;
   --accent-color-hover: #0039d1;
   --main-font: 'Inter Tight', sans-serif;
