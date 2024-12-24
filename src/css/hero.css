@@ -25,7 +25,7 @@
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
   .hero-section {
     margin-bottom: 96px;
     height: 900px;
@@ -57,7 +57,7 @@
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
   .hero-title {
     justify-content: center;
     margin-bottom: 243px;
