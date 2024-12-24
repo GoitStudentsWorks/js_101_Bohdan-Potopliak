@@ -10,7 +10,7 @@
       rgba(59, 59, 59, 0.1),
       rgba(255, 255, 255, 0)
     ),
-    url(../public/img/work-together-img/bg-@1.png);
+    url(/img/work-together-img/bg-@1.png);
   background-size: auto;
   background-repeat: no-repeat;
   background-position: 290px center;
@@ -28,8 +28,8 @@
         rgba(255, 255, 255, 0)
       ),
       image-set(
-        url(../public/img/work-together-img/bg-@2.png) type('image/png'),
-        url(../public/img/work-together-img/bg-@1.png) type('image/png')
+        url(/img/work-together-img/bg-@2.png) type('image/png'),
+        url(/img/work-together-img/bg-@1.png) type('image/png')
       );
   }
 }
@@ -197,7 +197,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
+  .container-work {
     max-width: 768px;
     padding: 0 32px;
   }
@@ -209,7 +209,7 @@
         rgba(59, 59, 59, 0.1),
         rgba(255, 255, 255, 0)
       ),
-      url(../public/img/work-together-img/bg-@1.png);
+      url(/img/work-together-img/bg-@1.png);
     background-repeat: no-repeat;
     background-size: auto;
     background-position: 570px center;
@@ -227,8 +227,8 @@
           rgba(255, 255, 255, 0)
         ),
         image-set(
-          url(../public/img/work-together-img/bg-@2.png) type('image/png'),
-          url(../public/img/work-together-img/bg-@1.png) type('image/png')
+          url(/img/work-together-img/bg-@2.png) type('image/png'),
+          url(/img/work-together-img/bg-@1.png) type('image/png')
         );
     }
   }
@@ -303,8 +303,8 @@
   }
 }
 
-@media only screen and (min-width: 1280px) {
-  .container {
+@media only screen and (min-width: 1440px) {
+  .container-work {
     max-width: 1440px;
     padding: 0 196px;
   }
@@ -316,7 +316,7 @@
   .work_together_backdrop {
     padding: 195px 474px;
   }
-
+  
   .work_together_input_email {
     width: 390px;
   }
