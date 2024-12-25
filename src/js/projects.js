@@ -17,6 +17,7 @@ const swiperProjects = new Swiper('.swiper' && '.swiper-projects', {
         prevEl: '.swiper-button-prev',
     },
     centeredSlidesBounds: true,
+    preventInteractionOnTransition: true,
     slidesPerGroup: 1,
 });
 
