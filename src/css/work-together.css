@@ -70,12 +70,12 @@
 .work_together_wrap_logo_text span {
   color: var(--accent-color);
 }
-/* !====================================== */
+
 .work_together_form {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding-bottom: 64px;
+  padding-bottom: 74px;
 }
 
 .work_together_wrap_form {
@@ -146,31 +146,26 @@
   background-color: var(--accent-color-hover);
 }
 
-/* !====================================== */
-
 .work_together_address_list {
   display: inline-flex;
   justify-content: flex-start;
   gap: 4px;
 }
 
-.work_together_address_item {
-  border-radius: 60px;
-  border: 1px solid rgba(250, 250, 250, 0.2);
+.work_together_address_link {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   padding: 10px 12px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.work_together_address_item:hover,
-.work_together_address_item:focus,
-.work_together_address_item:active {
+.work_together_address_link:hover,
+.work_together_address_link:focus,
+.work_together_address_link:active {
   border: 1px solid #fafafa;
-}
-
-.work_together_address_link {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
 }
 
 .work_together_backdrop {
@@ -207,9 +202,6 @@
   top: 20px;
   padding: 0;
   background-color: transparent;
-  /* !============= */
-  color: #fafafa;
-  /* !============= */
 }
 
 .work_together_modal_close_btn:hover {
@@ -218,6 +210,8 @@
 
 .work_together_modal_wrap_messages {
   padding: 64px 32px 64px 32px;
+  width: 343px;
+  margin: 0 auto;
 }
 
 .work_together_modal_title,
@@ -229,11 +223,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding: 0 32px;
-  }
-
   .work_together_container {
     padding-top: 80px;
     padding-bottom: 169px;
@@ -291,7 +280,7 @@
     gap: 32px;
     justify-content: center;
     align-items: center;
-    padding-bottom: 18px;
+    padding-bottom: 36px;
   }
 
   .work_together_wrap_form {
@@ -323,11 +312,9 @@
     gap: 8px;
   }
 
-  .work_together_address_item {
-    padding: 18px 32px;
-  }
   .work_together_address_link {
     font-size: 16px;
+    padding: 18px 32px;
   }
 
   .work_together_backdrop {
@@ -336,15 +323,11 @@
 
   .work_together_modal_wrap_messages {
     padding: 64px;
+    width: 492px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-    padding: 0 32px;
-  }
-
   .work_together_container {
     padding: 80px 196px 169px 196px;
   }

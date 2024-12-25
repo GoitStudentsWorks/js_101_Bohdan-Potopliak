@@ -68,7 +68,7 @@
     transition: all 0.3s ease;
 }
 .arrow-icon {
-    fill: aliceblue;
+    stroke:#fafafa;
     transition: transform 0.3s ease;
     transform: rotate(-180deg);
 }

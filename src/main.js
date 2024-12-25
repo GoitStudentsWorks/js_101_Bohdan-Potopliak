@@ -1,14 +1,6 @@
-`use strict`;
+`use strict`
 
-
-
-
-
-
-
-
-
-
+import { handleOpenBtnClick, handleCloseBtnClick, handleMainMenuOpen, handleRedirectClick } from "./js/header";
 
 import './js/reviews';
 import './js/projects';

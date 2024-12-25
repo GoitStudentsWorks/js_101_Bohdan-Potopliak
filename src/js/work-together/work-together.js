@@ -1,5 +1,5 @@
 import { postRequest } from './work-together-api';
-import { showError } from './toast-helper';
+import { showError, showWarning } from './toast-helper';
 
 const contactForm = document.querySelector('#work_together_form');
 contactForm.addEventListener('input', handleInput);
@@ -62,19 +62,17 @@ async function onContactFormSubmit(event) {
   event.preventDefault();
 
   if (!formData.email || !formData.comment) {
-    return alert('Please fill all fields');
+    return showWarning('Please fill all fields');
   }
 
   try {
     console.log('formData', formData);
     const response = await postRequest(formData);
 
-    console.log('response', response);
     modalHandler.openModal(response.data.title, response.data.message);
     event.target.reset();
   } catch (error) {
     showError(error.message);
-    console.error('error', error);
   }
 }
 
