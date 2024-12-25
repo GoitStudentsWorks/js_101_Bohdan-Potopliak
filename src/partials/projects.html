@@ -1,7 +1,7 @@
 <section id="projects" class="projects">
   <div class="container">
     <h2 class="projects-header">PROJECTS</h2>
-    <div class="swiper">
+    <div class="swiper swiper-projects">
       <!-- Wrapper -->
       <div class="swiper-wrapper">
         <!-- Slide 1 -->
@@ -20,27 +20,26 @@
               <button type="button" class="project-btn">See project</button>
             </div>
             <div class="project-img-wrapper">
-              <img
-                class="project-img"
-                src="../img/projects/mobile/read-journey-mb-1x.jpg"
-                srcset="
-                  ../img/projects/mobile/read-journey-mb-1x.jpg   375w,
-                  ../img/projects/mobile/read-journey-mb@2x.jpg   750w,
-                  ../img/projects/tablet/read-journey-tt-1x.jpg   768w,
-                  ../img/projects/tablet/read-journey-tt@2x.jpg  1536w,
-                  ../img/projects/desktop/read-journey-dt-1x.jpg 1280w,
-                  ../img/projects/desktop/read-journey-dt@2x.jpg 1440w
-                "
-                sizes="(max-width: 375px) 100vw,
-                       (max-width: 768px) 100vw,
-                       (max-width: 1440px) 50vw,
-                       33vw"
-                alt="Read journey project"
-              />
+              <picture>
+                <source media="(min-width: 1440px)" srcset="
+                  /projects/desktop/read-journey-dt-1x.jpg 1440w,
+                  /projects/desktop/read-journey-dt@2x.jpg 2880w">
+  
+                <source media="(min-width: 768px)" srcset="
+                  /projects/tablet/read-journey-tt-1x.jpg 768w,
+                  /projects/tablet/read-journey-tt@2x.jpg 1536w">
+                
+                <source media="(max-width: 767px)" srcset="
+                  /projects/mobile/read-journey-mb-1x.jpg 375w,
+                  /projects/mobile/read-journey-mb@2x.jpg 750w">
+              
+                <img class="project-img"
+                     src="projects/mobile/read-journey-mb-1x.jpg"
+                     alt="Read journey project">
+              </picture>
             </div>
           </div>
         </div>
-
         <!-- Slide 2 -->
         <div class="swiper-slide">
           <div class="projects-item">
@@ -57,27 +56,26 @@
               <button type="button" class="project-btn">See project</button>
             </div>
             <div class="project-img-wrapper">
-              <img
-                class="project-img"
-                src="../img/projects/mobile/pet-love-mb-1x.jpg"
-                srcset="
-                  ../img/projects/mobile/pet-love-mb-1x.jpg   375w,
-                  ../img/projects/mobile/pet-love-mb@2x.jpg   750w,
-                  ../img/projects/tablet/pet-love-tt-1x.jpg   768w,
-                  ../img/projects/tablet/pet-love-tt@2x.jpg  1536w,
-                  ../img/projects/desktop/pet-love-dt-1x.jpg 1440w,
-                  ../img/projects/desktop/pet-love-dt@2x.jpg 1440w
-                "
-                sizes="(max-width: 375px) 100vw,
-                       (max-width: 768px) 100vw,
-                       (max-width: 1440px) 50vw,
-                       33vw"
-                alt="Pet Love project"
-              />
+              <picture>
+                <source media="(min-width: 1440px)" srcset="
+                  /projects/desktop/pet-love-dt-1x.jpg 1440w,
+                  /projects/desktop/pet-love-dt@2x.jpg 2880w">
+  
+                <source media="(min-width: 768px)" srcset="
+                  /projects/tablet/pet-love-tt-1x.jpg 768w,
+                  /projects/tablet/pet-love-tt@2x.jpg 1536w">
+                
+                <source media="(max-width: 767px)" srcset="
+                  /projects/mobile/pet-love-mb-1x.jpg 375w,
+                  /projects/mobile/pet-love-mb@2x.jpg 750w">
+              
+                <img class="project-img"
+                     src="/projects/mobile/pet-love-mb-1x.jpg"
+                     alt="Pet Love project">
+              </picture>
             </div>
           </div>
         </div>
-
         <!-- Slide 3 -->
         <div class="swiper-slide">
           <div class="projects-item">
@@ -94,37 +92,36 @@
               <button type="button" class="project-btn">See project</button>
             </div>
             <div class="project-img-wrapper">
-              <img
-                class="project-img"
-                src="../img/projects/mobile/vocab-builder-mb-1x.jpg"
-                srcset="
-                  ../img/projects/mobile/vocab-builder-mb-1x.jpg   375w,
-                  ../img/projects/mobile/vocab-builder-mb@2x.jpg   750w,
-                  ../img/projects/tablet/vocab-builder-tt-1x.jpg   768w,
-                  ../img/projects/tablet/vocab-builder-tt@2x.jpg  1536w,
-                  ../img/projects/desktop/vocab-builder-dt-1x.jpg 1440w,
-                  ../img/projects/desktop/vocab-builder-dt@2x.jpg 2880w
-                "
-                sizes="(max-width: 375px) 100vw,
-                       (max-width: 768px) 100vw,
-                       (max-width: 1440px) 50vw,
-                       33vw"
-                alt="Vocab Builder project"
-              />
+              <picture>
+                <source media="(min-width: 1440px)" srcset="
+                  /projects/desktop/vocab-builder-dt-1x.jpg 1440w,
+                  /projects/desktop/vocab-builder-dt@2x.jpg 2880w">
+  
+                <source media="(min-width: 768px)" srcset="
+                  /projects/tablet/vocab-builder-tt-1x.jpg 768w,
+                  /projects/tabletvocab-builder-tt@2x.jpg 1536w">
+                
+                <source media="(max-width: 767px)" srcset="
+                  /projects/mobile/vocab-builder-mb-1x.jpg 375w,
+                  /projects/mobile/vocab-builder-mb@2x.jpg 750w">
+              
+                <img class="project-img"
+                     src="/projects/mobile/vocab-builder-mb-1x.jpg"
+                     alt="Vocab Builder project">
+              </picture>
             </div>
           </div>
         </div>
       </div>
-
       <!-- Navigation buttons -->
       <div class="slider-navigation">
         <div class="swiper-button-prev" aria-label="Previous slide">
-          <svg width="24" height="24">
-            <use href="/symbol-defs.svg#icon-aboutme"></use>
+          <svg class="btn-arrow" width="24" height="24">
+            <use href="/symbol-defs.svg#icon-left"></use>
           </svg>
         </div>
         <div class="swiper-button-next" aria-label="Next slide">
-          <svg width="24" height="24">
+          <svg class="btn-arrow" width="24" height="24">
             <use href="/symbol-defs.svg#icon-right"></use>
           </svg>
         </div>

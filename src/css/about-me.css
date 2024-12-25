@@ -1,5 +1,5 @@
 .about-me {
-    padding-bottom: 64px;
+    margin-bottom: 64px;
 }
 
 .about-div {
@@ -146,7 +146,7 @@
 
 @media only screen and (min-width: 768px) {
     .about-div {
-        padding-bottom: 64px;
+        margin-bottom: 96px;
     }
     
     .accordion-block .ac:not(:first-child) {
@@ -189,7 +189,7 @@
 
 @media only screen and (min-width: 1440px) {
     .about-me{
-        padding-bottom: 478px;
+        padding-bottom: 100px;
     }
 
     .accordion-block .ac .ac-panel .ac-text {
