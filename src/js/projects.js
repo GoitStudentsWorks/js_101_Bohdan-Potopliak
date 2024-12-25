@@ -17,10 +17,7 @@ const swiperProjects = new Swiper('.swiper' && '.swiper-projects', {
         prevEl: '.swiper-button-prev',
     },
     centeredSlidesBounds: true,
-    loop: false,
-    slidesPerView: 1,
     slidesPerGroup: 1,
-    spaceBetween: 10,
 });
 
 document.querySelectorAll('.project-btn').forEach((button) => {
