@@ -229,11 +229,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding: 0 32px;
-  }
-
   .work_together_container {
     padding-top: 80px;
     padding-bottom: 169px;
@@ -340,11 +335,6 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-    padding: 0 32px;
-  }
-
   .work_together_container {
     padding: 80px 196px 169px 196px;
   }
