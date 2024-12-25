@@ -4,11 +4,12 @@ import { Navigation, Keyboard } from 'swiper/modules';
 
 const swiperProjects = new Swiper('.swiper' && '.swiper-projects', {
     slidesPerView: 1,
+    preventInteractionOnTransition: true,
     spaceBetween: 30,
     loop: false,
     modules: [Navigation, Keyboard ],
     speed: 500,
-     keyboard: {
+    keyboard: {
         enabled: true,
         onlyInViewport: true,
     },
