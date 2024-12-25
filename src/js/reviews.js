@@ -108,7 +108,6 @@ fetchData()
     entries.forEach(entry => {
         if (entry.isIntersecting && serverError) {
         showError("Виникли проблеми з отриманням даних із сервера.");
-        // cardsContainer.insertAdjacentHTML("beforeend", <p class="not-found">Not found</p>);
         cardsContainer.insertAdjacentHTML("beforeend", '<p class="not-found">Not found</p>');
         serverError = null;
         observer.disconnect();
@@ -143,7 +142,7 @@ navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
 },
-centeredSlidesBounds: true,
+// centeredSlidesBounds: true,
 loop: false,
 slidesPerView: 1,
 slidesPerGroup: 1,
@@ -151,7 +150,7 @@ spaceBetween: 10,
 breakpoints: {
     768: {
     slidesPerView: 2,
-    spaceBetween: 16,
+    spaceBetween: 17.8,
     },
     1440: {
     slidesPerView: 4,
