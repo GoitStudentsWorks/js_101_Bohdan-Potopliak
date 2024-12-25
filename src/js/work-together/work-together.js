@@ -4,14 +4,18 @@ import { showError, showWarning } from './toast-helper';
 const contactForm = document.querySelector('#work_together_form');
 contactForm.addEventListener('input', handleInput);
 contactForm.addEventListener('submit', onContactFormSubmit);
+
 const formData = { email: '', comment: '' };
 
+const messageContent = document.getElementById('work_together_message_content');
+const messageWrap = document.getElementById('work_together_message_wrap');
+const userCommentTextarea = document.getElementById('work_together_comment');
+
 function handleInput(event) {
-  const messageContent = document.getElementById(
-    'work_together_message_content'
-  );
-  const messageWrap = document.getElementById('work_together_message_wrap');
-  const userCommentTextarea = document.getElementById('work_together_comment');
+  // const messageContent = document.getElementById('work_together_message_content');
+  // const messageWrap = document.getElementById('work_together_message_wrap');
+  // const userCommentTextarea = document.getElementById('work_together_comment');
+
   const MAX_COMMENT_LENGTH = 21;
 
   let userComment = userCommentTextarea.value;
@@ -73,6 +77,12 @@ async function onContactFormSubmit(event) {
     event.target.reset();
   } catch (error) {
     showError(error.message);
+  } finally {
+    messageContent.textContent = '';
+    messageWrap.classList.remove('work_together_wrap_red');
+    messageContent.classList.remove('work_together_succes_red');
+    messageWrap.classList.remove('work_together_wrap_green');
+    messageContent.classList.remove('work_together_succes_green');
   }
 }
 
