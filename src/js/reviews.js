@@ -66,7 +66,7 @@ const swiperReviews = new Swiper('.swiper' && '.swiper-reviews', {
     breakpoints: {
         768: {
             slidesPerView: 2,
-            spaceBetween: 16
+            spaceBetween: 17.8,
         },
         1440: {
             slidesPerView: 4,
