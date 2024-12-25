@@ -88,8 +88,8 @@
   gap: 12px;
   justify-content: center;
   align-items: center;
-  padding: 32px 0;
-  margin-bottom: 32px;
+  padding-top: 32px;
+  padding-bottom: 64px;
 }
 
 .btn-svg {
@@ -109,7 +109,8 @@
 
 @media screen and (min-width: 768px) {
   .slider-navigation {
-    margin: 64px 0 0;
+    padding-top: 64px;
+    padding-bottom: 96px;
   }
 
   .project-content {
@@ -158,7 +159,7 @@
 
 @media only screen and (min-width: 1440px) {
   .slider-navigation {
-    margin-bottom: 100px;
+    padding-bottom: 164px;
   }
 
   .tags-list {
