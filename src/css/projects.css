@@ -124,6 +124,11 @@
     padding: 18px;
   }
 
+  .btn-svg {
+    width: 68px;
+    height: 68px;
+  }
+
   .project-descr {
     font-size: 44px;
     font-weight: 600;
