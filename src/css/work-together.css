@@ -70,7 +70,7 @@
 .work_together_wrap_logo_text span {
   color: var(--accent-color);
 }
-
+/* !====================================== */
 .work_together_form {
   display: flex;
   flex-direction: column;
@@ -81,11 +81,37 @@
 .work_together_wrap_form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 23px;
 }
 
-.work_together_wrap_email,
-.work_together_wrap_textarea {
+.work_together_wrap_green {
+  border-bottom: 1px solid #3cbc81;
+}
+
+.work_together_wrap_red {
+  border-bottom: 1px solid #e74a3b;
+}
+
+.work_together_succes {
+  font-family: var(--main-font);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  position: absolute;
+}
+
+.work_together_succes_green {
+  color: #3cbc81;
+}
+
+.work_together_succes_red {
+  color: #e74a3b;
+}
+
+.work_together_wrap_textarea,
+.work_together_wrap_email {
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
   padding-bottom: 20px;
 }
@@ -101,10 +127,7 @@
 .work_together_input_text {
   background-color: transparent;
   height: 24px;
-  width: 343px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  max-width: 343px;
   border: none;
   outline: none;
   resize: none;
@@ -122,6 +145,8 @@
 .work_together_button:active {
   background-color: var(--accent-color-hover);
 }
+
+/* !====================================== */
 
 .work_together_address_list {
   display: inline-flex;
@@ -182,6 +207,13 @@
   top: 20px;
   padding: 0;
   background-color: transparent;
+  /* !============= */
+  color: #fafafa;
+  /* !============= */
+}
+
+.work_together_modal_close_btn:hover {
+  background-color: initial;
 }
 
 .work_together_modal_wrap_messages {
@@ -197,9 +229,14 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .container-work {
+  .container {
     max-width: 768px;
     padding: 0 32px;
+  }
+
+  .work_together_container {
+    padding-top: 80px;
+    padding-bottom: 169px;
   }
 
   .work_together_background_image {
@@ -233,11 +270,6 @@
     }
   }
 
-  .work_together_container {
-    padding-top: 80px;
-    padding-bottom: 169px;
-  }
-
   .work_together_wrap {
     gap: 7px;
     padding-bottom: 64px;
@@ -268,6 +300,10 @@
     gap: 32px;
     justify-content: center;
     align-items: center;
+  }
+
+  .work_together_wrap_email {
+    padding-bottom: 23.5px;
   }
 
   .work_together_input_email {
@@ -304,9 +340,13 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .container-work {
+  .container {
     max-width: 1440px;
-    padding: 0 196px;
+    padding: 0 32px;
+  }
+
+  .work_together_container {
+    padding: 80px 196px 169px 196px;
   }
 
   .work_together_background_image {
@@ -316,7 +356,7 @@
   .work_together_backdrop {
     padding: 195px 474px;
   }
-  
+
   .work_together_input_email {
     width: 390px;
   }
