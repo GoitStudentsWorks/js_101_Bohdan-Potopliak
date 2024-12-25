@@ -12,10 +12,6 @@ const messageWrap = document.getElementById('work_together_message_wrap');
 const userCommentTextarea = document.getElementById('work_together_comment');
 
 function handleInput(event) {
-  // const messageContent = document.getElementById('work_together_message_content');
-  // const messageWrap = document.getElementById('work_together_message_wrap');
-  // const userCommentTextarea = document.getElementById('work_together_comment');
-
   const MAX_COMMENT_LENGTH = 21;
 
   let userComment = userCommentTextarea.value;
