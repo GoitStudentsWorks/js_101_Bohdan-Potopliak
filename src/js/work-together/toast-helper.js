@@ -9,6 +9,16 @@ iziToast.settings({
   transitionOut: 'flipOutX',
 });
 
+export function showWarning(message) {
+  iziToast.show({
+    message: message,
+    backgroundColor: '#0039d1',
+    messageColor: '#fafafa',
+    maxWidth: '280',
+    position: 'topCenter',
+  });
+}
+
 export function showError(message) {
   iziToast.show({
     message: message,
