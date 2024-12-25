@@ -1,3 +1,73 @@
-.header {
-    position: relative;
+.about-me-introduction, 
+.intro-content-img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.intro-text-cover {
+    border-radius: 24px;
+    min-width: 320px;
+    height: 500px;
+    background: var(--cards);
+}
+
+.intro-description {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16667;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--main-color);
+    padding: 32px;
+    padding-bottom: 272px;
+}
+
+.intro-red-accent {
+    color: var(--button-text);
+}
+
+.intro-grey-accent {
+    color: var(--color-text);
+}
+
+.about-me-introduction {
+    padding-bottom: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+    .intro-text-cover, 
+    .intro-img {
+        width: 704px;
+        height: 700px; 
+        object-fit: cover;
+    }
+    .intro-description {
+        font-size: 38px;
+        line-height: 1.05263;
+        padding: 64px;
+        padding-bottom: 436px;
+    }
+
+    .about-me-introduction {
+        padding-bottom: 64px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .about-me-introduction {
+        flex-direction: row;
+    }
+
+    .intro-text-cover,
+    .intro-img {
+        width: 680px;
+        object-fit: cover;
+    }
+
+    .about-me-introduction {
+        padding-bottom: 96px;
+    }
 }
