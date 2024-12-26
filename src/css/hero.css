@@ -77,6 +77,10 @@
 }
 
 .hero-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 14px;
@@ -117,7 +121,6 @@
   letter-spacing: -0.02em;
   color: var(--main-color);
 }
-
 
 .hero-social-link:hover,
 .hero-social-link:active {
@@ -178,4 +181,3 @@
     width: 223px;
   }
 }
-
