@@ -110,14 +110,13 @@
     width: 100%;
 }
 
-.active-slide{
+.active-slide > .skill-item {
     background-color: #0039D1 !important;
 }
 
-.skill-item.swiper-slide {
-    width: 130px;
-    height: 130px;
-    flex-shrink: 0;
+.skill-item {
+    min-width: 130px;
+    min-height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,7 +176,7 @@
         margin-bottom: 0;
     }
     
-    .skill-item.swiper-slide {
+    .skill-item {
         height: 200px;
         font-size: 20px;
         width: 200px;
