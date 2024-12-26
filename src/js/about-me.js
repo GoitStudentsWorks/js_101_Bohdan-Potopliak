@@ -24,7 +24,7 @@
         slidesPerView: 3,
         },
         1440: {
-        slidesPerView: 5,
+        slidesPerView: 6,
         },
     },
     keyboard: {
