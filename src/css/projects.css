@@ -1,3 +1,7 @@
+.projects {
+padding: 64px 0;
+}
+
 .projects-header {
   font-size: 16px;
   font-weight: 600;
@@ -88,7 +92,7 @@
   gap: 12px;
   justify-content: center;
   align-items: center;
-  margin: 32px 0 64px;
+  margin-top: 32px;
 }
 
 .btn-svg {
@@ -111,8 +115,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .projects {
+    padding: 96px 0;
+  }
   .slider-navigation {
-    margin: 64px 0 96px;
+    margin-top: 64px;
   }
 
   .project-content {
@@ -160,8 +167,13 @@
 }
 
 @media only screen and (min-width: 1440px) {
+
+  .projects {
+    padding: 164px 0;
+  }
+
   .slider-navigation {
-    margin-bottom: 164px;
+    margin-top: 164px;
   }
 
   .tags-list {
