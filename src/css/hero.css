@@ -165,6 +165,7 @@
 
   .hero-section .hero-social-list {
     flex-wrap: wrap;
+    row-gap: 10px;
   }
 }
 
