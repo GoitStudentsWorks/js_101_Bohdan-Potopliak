@@ -10,6 +10,7 @@ const formData = { email: '', comment: '' };
 const messageContent = document.getElementById('work_together_message_content');
 const messageWrap = document.getElementById('work_together_message_wrap');
 const userCommentTextarea = document.getElementById('work_together_comment');
+const hoverWrap = document.querySelector('.work_together_hover');
 
 function handleInput(event) {
   const MAX_COMMENT_LENGTH = 21;
@@ -31,6 +32,7 @@ function handleInput(event) {
     const email = formData.email;
 
     if (email.length === 0) {
+      messageWrap.classList.add('work_together_wrap_email');
       messageContent.textContent = '';
       messageWrap.classList.remove(
         'work_together_wrap_red',
@@ -42,13 +44,28 @@ function handleInput(event) {
       );
     } else if (!pattern.test(email)) {
       messageContent.textContent = 'Invalid email, try again';
-      messageWrap.classList.add('work_together_wrap_red');
-      messageContent.classList.add('work_together_succes_red');
-      messageWrap.classList.remove('work_together_wrap_green');
       messageContent.classList.remove('work_together_succes_green');
+      messageContent.classList.add('work_together_succes_red');
+      messageWrap.classList.replace(
+        'work_together_wrap_email',
+        'work_together_wrap_red'
+      ) ||
+        messageWrap.classList.replace(
+          'work_together_wrap_green',
+          'work_together_wrap_red'
+        );
     } else {
+      console.log(2);
       messageContent.textContent = 'Success!';
-      messageWrap.classList.add('work_together_wrap_green');
+
+      messageWrap.classList.replace(
+        'work_together_wrap_email',
+        'work_together_wrap_green'
+      ) ||
+        messageWrap.classList.replace(
+          'work_together_wrap_red',
+          'work_together_wrap_green'
+        );
       messageContent.classList.add('work_together_succes_green');
       messageWrap.classList.remove('work_together_wrap_red');
       messageContent.classList.remove('work_together_succes_red');
@@ -82,6 +99,7 @@ async function onContactFormSubmit(event) {
       'work_together_succes_red',
       'work_together_succes_green'
     );
+    messageWrap.classList.add('work_together_wrap_email');
   }
 }
 
