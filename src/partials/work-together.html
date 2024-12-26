@@ -1,32 +1,31 @@
-<footer class="work_together">
-  <div class="container work_together_container">
+<footer class="work_together work_together_container" id="work-together">
+  <h3 class="visually-hidden">Work together</h3>
+  <div
+    class="work_together_background_image container work_together_container_desk"
+  >
     <div class="work_together_wrap">
       <div class="work_together_wrap_picture">
         <picture>
           <source
             srcset="
-              /img/work-together-img/foto-70x70px-1x.jpg 1x,
-              /img/work-together-img/foto-70x70px-2x.jpg 2x
+              ./img/work-together-img/foto-70x70px-1x.jpg 1x,
+              ./img/work-together-img/foto-70x70px-2x.jpg 2x
             "
             type="image/jpeg"
             media="(min-width: 768px)"
           />
-
           <source
             srcset="
-              /img/work-together-img/foto-44x44px-1x.jpg 1x,
-              /img/work-together-img/foto-44x44px-2x.jpg 2x
+              ./img/work-together-img/foto-44x44px-1x.jpg 1x,
+              ./img/work-together-img/foto-44x44px-2x.jpg 2x
             "
             type="image/jpeg"
-            media="(min-width: 320px)"
+            media="(max-width: 768px)"
           />
           <img
-            src="/img/work-together-img/foto-44x44px-1x.jpg"
+            src="./img/work-together-img/foto-44x44px-1x.jpg"
             class="work_together_logo"
             alt="foto"
-            width="44"
-            height="44"
-            loading="lazy"
           />
         </picture>
         <h2 class="work_together_wrap_logo_text">
@@ -39,36 +38,48 @@
     </div>
     <form class="work_together_form" id="work_together_form">
       <div class="work_together_wrap_form">
-        <div class="work_together_wrap_email">
-          <label class="work_together_label_email visually-hidden" for="email">
-            email</label
-          >
-          <input
-            class="work_together_input_email"
-            name="email"
-            id="user_email"
-            type="email"
-            placeholder="clients@gmail.com"
-            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-            required
-          />
+        <div>
+          <div class="work_together_wrap_email" id="work_together_message_wrap">
+            <label
+              class="work_together_label_email visually-hidden"
+              for="work_together_email"
+            >
+              email</label
+            >
+            <input
+              class="work_together_input_email common-text"
+              name="email"
+              id="work_together_email"
+              type="email"
+              placeholder="clients@gmail.com"
+            />
+          </div>
+
+          <div class="work_together_wrap_succes">
+            <p
+              id="work_together_message_content"
+              class="work_together_succes"
+            ></p>
+          </div>
         </div>
 
-        <div class="work_together_wrap_textarea">
-          <label
-            class="work_together_label_textarea visually-hidden"
-            for="comment"
-            >comments</label
-          >
-          <textarea
-            class="work_together_input_text"
-            name="comment"
-            id="user_comment"
-            placeholder="comments"
-            required
-          ></textarea>
+        <div>
+          <div class="work_together_wrap_textarea">
+            <label
+              class="work_together_label_textarea visually-hidden"
+              for="work_together_comment"
+              >comments</label
+            >
+            <textarea
+              class="work_together_input_text common-text"
+              name="comment"
+              id="work_together_comment"
+              placeholder="comments"
+            ></textarea>
+          </div>
         </div>
       </div>
+
       <button
         class="work_together_button"
         id="work_together_buttonSend"
@@ -107,20 +118,19 @@
         data-modal-close
         type="button"
       >
-        X
-        <!-- <svg class="work_together_modal_close_icon" width="22" height="22">
-              <use href=""></use>
-            </svg> -->
+        <svg class="work_together_modal_close_icon" width="22" height="22">
+          <use href="./symbol-defs.svg#icon-btn-clone"></use>
+        </svg>
       </button>
       <div class="work_together_modal_wrap_messages">
         <h5
           data-modal-title
-          class="work_together_modal_title"
+          class="work_together_modal_title common-headers"
           id="work_together_title"
         ></h5>
         <p
           data-modal-message
-          class="work_together_modal_text"
+          class="work_together_modal_text common-text"
           id="work_together_text"
         ></p>
       </div>

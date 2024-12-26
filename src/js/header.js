@@ -3,11 +3,13 @@ const menuCloseBtn = document.querySelector('.menu-close-button');
 const mobileMenu = document.querySelector('.mobile-menu');
 const mainMenu = document.querySelector('.menu-link');
 const menuNav = document.querySelector('.menu-nav');
+const menuOrder = document.querySelector('.menu-order-button');
 
 menuOpenBtn.addEventListener('click', handleOpenBtnClick);
 menuCloseBtn.addEventListener('click', handleCloseBtnClick);
 mobileMenu.addEventListener('click', handleRedirectClick);
 mainMenu.addEventListener('click', handleMainMenuOpen);
+menuOrder.addEventListener('click', handleCloseBtnClick);
 
 export function handleOpenBtnClick() {
     mobileMenu.classList.add('is-open');

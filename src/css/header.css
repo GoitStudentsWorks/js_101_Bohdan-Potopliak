@@ -156,7 +156,7 @@
   width: 100%;
   height: 100%;
 
-  background-image: url(./img/hero/hero.png);
+  background-image: url("/img/hero/hero.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -182,12 +182,12 @@
 }
 
 .mobile-menu-wrap {
+  padding-bottom: 60px;
+  justify-content: center;
   position: relative;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   height: 100%;
 }
 
@@ -195,7 +195,6 @@
   position: absolute;
   top: 32px;
   right: 16px;
-
   background-color: transparent;
   border: none;
 }
@@ -203,9 +202,6 @@
 .mobile-menu-nav {
   display: flex;
   justify-content: center;
-
-  margin-top: 302px;
-  margin-bottom: 289px;
 }
 
 .mobile-menu-list {
@@ -217,7 +213,6 @@
 .mobile-menu-link {
   display: flex;
   justify-content: center;
-
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 16px;
@@ -229,16 +224,16 @@
 }
 
 .menu-order-button {
+  position: absolute;
+  bottom: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
-
   border-radius: 60px;
   padding: 14px 31px;
   width: 164px;
   height: 45px;
   background-color: var(--accent-color);
-
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 14px;
