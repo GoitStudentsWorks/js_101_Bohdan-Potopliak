@@ -9,7 +9,7 @@
     line-height: 1.5;
     letter-spacing: -0.02em;
     color: rgba(250, 250, 250, 0.4);
-    padding-bottom: 32px;
+    margin-bottom: 32px;
 }
 
 .faq-item {
@@ -23,7 +23,7 @@
 .faq-item.open .faq-answer {
     max-height: 300px;
     opacity: 1;
-    padding-top: 16px;
+    margin-top: 16px;
 }
 
 .faq-item.open .arrow-icon {
