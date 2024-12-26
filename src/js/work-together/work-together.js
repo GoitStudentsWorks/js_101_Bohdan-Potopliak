@@ -66,7 +66,6 @@ async function onContactFormSubmit(event) {
   }
 
   try {
-    console.log('formData', formData);
     const response = await postRequest(formData);
 
     modalHandler.openModal(response.data.title, response.data.message);
@@ -75,10 +74,14 @@ async function onContactFormSubmit(event) {
     showError(error.message);
   } finally {
     messageContent.textContent = '';
-    messageWrap.classList.remove('work_together_wrap_red');
-    messageContent.classList.remove('work_together_succes_red');
-    messageWrap.classList.remove('work_together_wrap_green');
-    messageContent.classList.remove('work_together_succes_green');
+    messageWrap.classList.remove(
+      'work_together_wrap_red',
+      'work_together_wrap_green'
+    );
+    messageContent.classList.remove(
+      'work_together_succes_red',
+      'work_together_succes_green'
+    );
   }
 }
 
