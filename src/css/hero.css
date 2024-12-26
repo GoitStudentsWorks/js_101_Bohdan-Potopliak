@@ -4,7 +4,7 @@
   margin: 0 auto;
 
   padding-top: 281px;
-  padding-bottom: 64px;
+  /* padding-bottom: 64px; */
 
   background-repeat: no-repeat;
   background-position: center;
@@ -113,6 +113,7 @@
   height: 37px;
   display: flex;
   align-items: center;
+  text-align: center;
 
   padding: 10px 12px;
   font-family: var(--main-font);
@@ -149,6 +150,22 @@
 .hero-social-item:nth-child(5) > .hero-social-link {
   padding: 10px 12px;
   width: 178px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .hero-title {
+    margin-bottom: 130px;
+  }
+
+  .hero-social-item:nth-child(5) > .hero-social-link {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hero-section .hero-social-list {
+    flex-wrap: wrap;
+  }
 }
 
 @media only screen and (min-width: 768px) {
