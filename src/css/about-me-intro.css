@@ -7,6 +7,11 @@
     gap: 16px;
 }
 
+.section-intro {
+    padding-top: 64px;
+    padding-bottom: 32px;
+}
+
 .intro-text-cover {
     border-radius: 24px;
     height: 500px;
@@ -32,10 +37,6 @@
     color: var(--color-text);
 }
 
-.about-me-introduction {
-    padding-bottom: 32px;
-}
-
 @media only screen and (min-width: 768px) {
     .intro-text-cover, 
     .intro-img {
@@ -50,9 +51,9 @@
         padding-bottom: 436px;
     }
 
-    .about-me-introduction {
-        padding-bottom: 64px;
-    }
+        .section-intro {
+            padding-bottom: 64px;
+        }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -65,8 +66,10 @@
         width: 680px;
         object-fit: cover;
     }
-
-    .about-me-introduction {
-        padding-bottom: 96px;
-    }
+    
+        .section-intro {
+            padding-top: 108px;
+            padding-bottom: 96px;
+        }
+        
 }
