@@ -76,6 +76,18 @@ const swiperReviews = new Swiper('.swiper' && '.swiper-reviews', {
     },
 });
 
+document.querySelector('.swiper-reviews').addEventListener('keydown', function (event) {
+    if (event.key === 'Tab') {
+        event.preventDefault();
+
+        if (event.shiftKey) {
+            swiperReviews.slidePrev();
+        } else {
+            swiperReviews.slideNext();
+        }
+    }
+});
+
 function showError(message) {
     iziToast.error({
         title: 'Error',
