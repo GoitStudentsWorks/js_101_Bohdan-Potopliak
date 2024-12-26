@@ -1,11 +1,11 @@
 .reviews-section {
-    margin-top: 64px;
-    margin-bottom: 64px;
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
 .not-found {
-    margin: 30px auto;
     font-size: 36px;
+    margin: 50px auto;
 }
 
 p {
@@ -47,7 +47,7 @@ p {
     overflow: hidden;
     overflow-y: auto;
     scrollbar-color: transparent transparent;
-    scrollbar-width: 1px;
+    scrollbar-width: thin;
 }
 
 
@@ -104,8 +104,8 @@ p {
     }
 
     .reviews-section {
-        margin-top: 96px;
-        margin-bottom: 96px;
+        padding-top: 96px;
+        padding-bottom: 96px;
     }
 
     .swiper-button-prev.arrow,
@@ -117,8 +117,8 @@ p {
 
 @media screen and (min-width:1440px) {
     .reviews-section {
-        margin-top: 164px;
-        margin-bottom: 164px;
+        padding-top: 164px;
+        padding-bottom: 164px;
     }
 
     .card{
