@@ -1,5 +1,5 @@
 .projects {
-padding: 64px 0;
+padding-bottom: 64px;
 }
 
 .projects-header {
@@ -116,7 +116,7 @@ padding: 64px 0;
 
 @media screen and (min-width: 768px) {
   .projects {
-    padding: 96px 0;
+    padding-bottom: 96px;
   }
   .slider-navigation {
     margin-top: 64px;
@@ -169,7 +169,7 @@ padding: 64px 0;
 @media only screen and (min-width: 1440px) {
 
   .projects {
-    padding: 164px 0;
+    padding-bottom: 164px;
   }
 
   .tags-list {
