@@ -227,7 +227,8 @@
 
 .work_together_modal_wrap_messages {
   padding: 64px 32px 64px 32px;
-  width: 343px;
+  /* width: 343px; */
+  max-width: 343px;
   margin: 0 auto;
 }
 
@@ -340,7 +341,8 @@
 
   .work_together_modal_wrap_messages {
     padding: 64px;
-    width: 492px;
+    /* width: 492px; */
+    max-width: 492px;
   }
 }
 
