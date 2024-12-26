@@ -115,8 +115,6 @@
 }
 
 .skill-item {
-    min-width: 130px;
-    min-height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,6 +127,11 @@
     border-radius: 50%;
     border: 1px solid rgba(250, 250, 250, 0.2);
     text-align: center;
+}
+
+.skill-item.swper-slide{
+    max-width: 130px;
+    max-height: 130px;
 }
 
 
@@ -174,12 +177,16 @@
     
    .swiper-skill {
         margin-bottom: 0;
+        
+    }
+
+    .skill-item.swiper-slide{
+        height: 200px;
+            width: 200px;
     }
     
     .skill-item {
-        height: 200px;
         font-size: 20px;
-        width: 200px;
     }
     
     .btn-next {
