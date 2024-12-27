@@ -1,8 +1,13 @@
+.no-scroll {
+  overflow: hidden;
+}
+
 .work_together {
   position: relative;
   overflow: hidden;
 }
-work_together_backdrop .work_together_container {
+
+.work_together_container {
   padding-top: 32px;
   padding-bottom: 42px;
 }

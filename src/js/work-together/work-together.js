@@ -109,26 +109,32 @@ function handleModal() {
   const titleField = modal.querySelector('[data-modal-title]');
   const messageField = modal.querySelector('[data-modal-message]');
 
-  closeModalBtn.addEventListener('click', () => {
+  const openModal = (title, message) => {
+    if (title) titleField.textContent = title;
+    if (message) messageField.textContent = message;
+
+    modal.classList.add('is-open');
+    // document.body.classList.add('no-scroll'); // Блокуе прокрутку
+  };
+
+  const closeModal = () => {
     modal.classList.remove('is-open');
-  });
-  modal.addEventListener('click', () => {
-    modal.classList.remove('is-open');
+    // document.body.classList.remove('no-scroll'); // Разблоковує прокрутку
+  };
+
+  closeModalBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', event => {
+    if (event.target === modal) {
+      closeModal();
+    }
   });
 
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
-      modal.classList.remove('is-open');
+      closeModal();
     }
   });
 
-  return {
-    openModal: (title, message) => {
-      if (title) titleField.textContent = title;
-      if (message) messageField.textContent = message;
-
-      modal.classList.add('is-open');
-    },
-    closeModal: () => modal.classList.remove('is-open'),
-  };
+  return { openModal, closeModal };
 }
